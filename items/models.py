@@ -17,7 +17,7 @@ class Item(models.Model):
     name = models.CharField(max_length=150)
     image = models.TextField()
     price = models.FloatField()
-  
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="items")
 
     def __str__(self):
         return self.name
