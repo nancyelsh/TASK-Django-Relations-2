@@ -14,6 +14,7 @@ def get_items(req):
                 "name": item.name,
                 "price": item.price,
                 "image": item.image,
+                "category": item.category
             }
         )
     context = {"items": _items}
