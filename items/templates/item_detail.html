@@ -19,7 +19,10 @@
                     <div class="card-body">
                       <h5 class="card-title">{{item.name}}</h5>
                       <p class="card-text">{{item.price}} KD</p>
-                      <!-- <p class="card-text">{{item.message}}</p> -->
+                        {% for item in item.comments %}
+                        <p class="card-text">{{item}}</p>
+                        {% endfor %}
+                      <p class="card-text">{{item.category}}</p>
                     </div>
                   </div>
     </div>
